@@ -12,5 +12,9 @@ resource "docker_container" "local_container" {
     internal = "80"
     external = "8081"
   }
+
+  depends_on = [
+    docker_image.local_res
+  ]
   
 }
